@@ -203,7 +203,7 @@ TestSmbios (
   IN EFI_SYSTEM_TABLE  *SystemTable
   )
 {
-  CreateSmBios ();
+  CreateSmBios (NULL, 0);
 }
 
 

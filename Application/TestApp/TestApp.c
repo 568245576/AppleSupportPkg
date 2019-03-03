@@ -203,7 +203,10 @@ TestSmbios (
   IN EFI_SYSTEM_TABLE  *SystemTable
   )
 {
-  CreateSmBios (NULL, 0);
+  OC_SMBIOS_DATA  Data;
+  ZeroMem (&Data, sizeof (Data));
+  Data.BIOSVendor = "Acidanthera";
+  CreateSmBios (&Data, 0);
 }
 
 
